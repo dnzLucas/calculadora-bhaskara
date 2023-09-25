@@ -1,0 +1,42 @@
+*{
+    font-family: monospace;
+}
+
+
+h1, #resultado, label{
+    color: aliceblue;
+}
+form{
+    background-color: rgb(54, 54, 54);
+    display: block;
+    margin: auto;
+    width: 15%;
+    height: 300px;
+    text-align: center;
+    padding: 3%;
+    border-radius: 15px;
+}
+
+.abc > input{
+    display:block;
+    margin: 0 auto 20px auto ;
+}
+
+.abc{
+    text-align: center;
+}
+
+#resultado{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1.5em;
+    background-color: black;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.inputElabel{
+    margin: 20px;
+}

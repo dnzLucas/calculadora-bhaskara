@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+
+function click_calcular(){
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+
+    let delta = b ** 2 - (4 * a * c);
+
+    if (delta > 0) {
+        let r1 = (-b + Math.sqrt(delta)) / (2 * a);
+        let r2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+        document.getElementById("resultado").innerHTML = `x' = ${r1.toFixed(2)};  x" = ${r2.toFixed(2)}`;
+
+    }
+
+    else if (delta < 0){
+        document.getElementById("resultado").innerHTML = "ERR0";
+    }
+
+    else{
+        let r = (-b) / (2 * a);
+        document.getElementById("resultado").innerHTML = r;
+    }
+}
+
+function click_limpar(){
+        document.getElementById("a").value = "";
+        document.getElementById("b").value = "";
+        document.getElementById("c").value = "";
+    }
+
+</script>
+
+<body>
+    <form>
+
+        <h1>Bhaskara Calculator</h1>
+
+            <div id="resultado"></div>
+
+            <div class="abc">
+                <div class="inputElabel">
+                    <label for="a">a</label>
+                    <input type="number" name="a" id="a">
+                </div>
+        
+                <div class="inputElabel">
+                    <label for="b">b</label>
+                    <input type="number" name="b" id="b">
+                </div>
+        
+                <div class="inputElabel">
+                    <label for="c">c</label>
+                    <input type="number" name="c" id="c">
+                </div>
+
+                </div>
+    
+            <input type="button" value="Calcular" onclick="click_calcular()" >
+            <input type="button" value="Limpar" onclick="click_limpar()" >
+
+
+    </form>
+</body>
+
+</html>
